@@ -15,7 +15,7 @@ const FlashcardMakerPage: FC = () => {
       setQuestion("");
       setAnswer("");
     } else {
-      alert("Please enter both question and answer.");
+      alert("Формыг бүрэн бөглөнө үү.");
     }
   };
 

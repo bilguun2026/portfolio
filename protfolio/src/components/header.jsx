@@ -41,10 +41,10 @@ function Header() {
           </div>
         </div>
         <div className="flex flex-row items-center justify-center space-x-6 md:justify-end md:px-8">
+          <Link to="/flashcard">
           <motion.img src={add} />
-          <motion.img src={notify} />
+          </Link>
           <motion.img src={person} />
-          <motion.img src={burger} />
           <motion.button
             className="shadow appearance-none border bg-[#40DBDB] rounded-full py-1 px-6 md:px-12 truncate"
             whileHover={{ scale: 1.1 }}
