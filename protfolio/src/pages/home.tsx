@@ -1,72 +1,61 @@
 import Header from "../components/header";
-import { motion } from "framer-motion";
 import CardComponent from "../components/card";
 import cardData from "../data/homeCardData";
+import { motion } from "framer-motion";
+
+function smoothScrollToTarget(targetId: any) {
+  const targetElement = document.getElementById(targetId);
+  if (targetElement) {
+    window.scrollTo({
+      top: targetElement.offsetTop,
+      behavior: "smooth",
+    });
+  }
+}
 
 function Home() {
   return (
     <>
       <div>
         <Header />
-        <div className="flex flex-row items-center justify-center h-36 px-24 space-x-8 ">
-          <motion.button
-            className="shadow appearance-none border border-[#40DBDB] rounded-full w-full py-1 px-12 mx-1"
-            whileHover={{ scale: 1.05, borderColor: "#2db6b6" }}
-            whileTap={{ scale: 0.95 }}
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 1, duration: 0.5 }}
-          >
-            IQ Асуулт
-          </motion.button>
-          <motion.button
-            className="shadow appearance-none border border-[#40DBDB] rounded-full w-full py-1 px-12 mx-1"
-            whileHover={{ scale: 1.05, borderColor: "#2db6b6" }}
-            whileTap={{ scale: 0.95 }}
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 1, duration: 0.5 }}
-          >
-            Танин мэдэхүй
-          </motion.button>
-          <motion.button
-            className="shadow appearance-none border border-[#40DBDB] rounded-full w-full py-1 px-12 mx-1"
-            whileHover={{ scale: 1.05, borderColor: "#2db6b6" }}
-            whileTap={{ scale: 0.95 }}
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 1, duration: 0.5 }}
-          >
-            Боловсрол
-          </motion.button>
-          <motion.button
-            className="shadow appearance-none border border-[#40DBDB] rounded-full w-full py-1 px-12 mx-1"
-            whileHover={{ scale: 1.05, borderColor: "#2db6b6" }}
-            whileTap={{ scale: 0.95 }}
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 1, duration: 0.5 }}
-          >
-            Тоглоом
-          </motion.button>
-          <motion.button
-            className="shadow appearance-none border border-[#40DBDB] rounded-full w-full py-1 px-12 mx-1"
-            whileHover={{ scale: 1.05, borderColor: "#2db6b6" }}
-            whileTap={{ scale: 0.95 }}
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 1, duration: 0.5 }}
-          >
-            Шинжлэх ухаан
-          </motion.button>
+        <div className="flex flex-col items-center justify-center h-[850px] bg-black text-white p-56">
+          <h1 className="text-[60px] mb-8 whitespace-nowrap">
+            Experience EDU+: Where Learning Meets Fun!
+          </h1>
+          <h4 className="text-[30px] text-center">
+            Take quizzes, challenge friends, track scores, share results, and
+            enjoy seamless fun!
+          </h4>
+          <a href="#tester" onClick={() => smoothScrollToTarget("tester")}>
+            <motion.button className="border border-white rounded-full px-4 py-2 mt-48 transition-all hover:bg-white hover:text-black">
+              Interactive Exploration Quiz
+            </motion.button>
+          </a>
         </div>
-        <div className="grid grid-cols-3 grid-rows-2 px-12 h-auto justify-items-center items-center space-y-4 space-x-4">
-        {cardData.map(item => (
-        <div key={item.id}>
-          <CardComponent imageUrl={item.imageUrl} title={item.title} description={item.description} url={item.url} />
-        </div>
-      ))}
-        </div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5 }}
+          className="h-screen mb-4"
+          id="tester"
+        >
+          <div className="flex items-center justify-center p-4 text-bold text-[50px]">
+            Quiz topics
+          </div>
+          <div className="grid grid-cols-3 grid-rows-2 px-12 h-auto justify-items-center items-center space-y-4 space-x-4">
+            {cardData.map((item) => (
+              <div key={item.id}>
+                <CardComponent
+                  imageUrl={item.imageUrl}
+                  title={item.title}
+                  description={item.description}
+                  url={item.url}
+                />
+              </div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </>
   );
