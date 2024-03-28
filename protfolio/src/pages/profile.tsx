@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { User } from "./signUp";
 import Header from "../components/header";
 import { FiEdit } from "react-icons/fi";
-import profile from "../assets/profile.jpg"
+import profile from "../assets/profile.jpg";
 
 const Profile: React.FC<User> = ({ email, firstName }) => {
   return (
@@ -38,7 +38,7 @@ const Profile: React.FC<User> = ({ email, firstName }) => {
                 </motion.div>
               </div>
               <div className="flex flex-row justify-between">
-                <div className="flex flex-row">Овог: {firstName}</div>
+                <div className="flex flex-row">Овог: Bat</div>
                 <motion.div
                   whileHover={{ scale: 1.1 }} // Example hover animation, adjust as needed
                   whileTap={{ scale: 0.9 }} // Example tap animation, adjust as needed
@@ -47,7 +47,7 @@ const Profile: React.FC<User> = ({ email, firstName }) => {
                 </motion.div>
               </div>
               <div className="flex flex-row justify-between">
-                <div className="flex flex-row">Утас: 88888888</div>
+                <div className="flex flex-row">Утас: 99531051</div>
                 <motion.div
                   whileHover={{ scale: 1.1 }} // Example hover animation, adjust as needed
                   whileTap={{ scale: 0.9 }} // Example tap animation, adjust as needed
@@ -101,6 +101,13 @@ const Profile: React.FC<User> = ({ email, firstName }) => {
               <span className="text-lg font-bold text-white">Recent</span>
             </div>
           </div>
+          <motion.div
+            className="flex flex-col items-center justify-center h-full text-white font-bold text-[30px]"
+            whileHover={{ scale: 1.1 }} // Example hover animation, adjust as needed
+            whileTap={{ scale: 0.9 }} // Example tap animation, adjust as needed
+          >
+            Хоосон байна😊
+          </motion.div>
         </div>
       </motion.div>
     </>

@@ -5,3 +5,16 @@
 html {
     scroll-behavior: smooth;
   }
+
+  @font-face {
+    font-family: 'benzinMedium';
+    src: url('./assets/benzin-medium.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'benzinBold';
+    src: url('./assets/benzin-bold.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'benzin';
+    src: url('./assets/benzin-regular.ttf') format('truetype');
+  }

@@ -17,10 +17,10 @@ function smoothScrollToTarget(targetId: any) {
 function Home() {
   return (
     <>
-      <div>
+      <div className="font-benzin">
         <Header />
         <div className="flex flex-col items-center justify-center h-[850px] bg-[#000000] text-white p-56 relative overflow-hidden">
-          <h1 className="text-[50px] mb-8 whitespace-nowrap z-20 bg-black  rounded-2xl px-4 py-2">
+          <h1 className="text-[40px] mb-8 whitespace-nowrap z-20 bg-black  rounded-2xl px-4 py-2">
             EDU+ тэй туршлагаж: Хаана хөгжилтөй байна тэнд суралц!
           </h1>
           <h1 className="text-[30px] text-center z-20">
