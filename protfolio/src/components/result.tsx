@@ -15,16 +15,29 @@ const ResultComponent: React.FC = () => {
   return (
     <div className="max-w-lg mx-auto p-4 bg-white shadow-md rounded-md">
       <h2 className="text-2xl font-bold mb-4">Results</h2>
-      <ol className="list-decimal pl-6">
-        {lastTenQuestions.map((question: Question, index: number) => (
-          <li key={index} className="mb-4">
-            <p className="text-lg font-semibold">{`Question ${index + 1}: ${question.text}`}</p>
-            <p className={`text-base ${lastTenAnswers[index].isCorrect ? "text-green-600" : "text-red-600"}`}>
-              {lastTenAnswers[index].text}
-            </p>
-          </li>
-        ))}
-      </ol>
+      <div className="divide-y divide-gray-200">
+        <ol className="list-decimal pl-6">
+          {lastTenQuestions.map((question: Question, index: number) => (
+            <li key={index} className="py-4">
+              <div className="flex items-start mb-2">
+                <span className="text-lg font-semibold mr-2">{`Question ${
+                  index + 1
+                }:`}</span>
+                <p className="text-lg font-semibold">{question.text}</p>
+              </div>
+              <p
+                className={`text-base ${
+                  lastTenAnswers[index].isCorrect
+                    ? "text-green-600"
+                    : "text-red-600"
+                }`}
+              >
+                {lastTenAnswers[index].text}
+              </p>
+            </li>
+          ))}
+        </ol>
+      </div>
     </div>
   );
 };

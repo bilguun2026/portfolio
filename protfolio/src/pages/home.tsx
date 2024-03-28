@@ -17,20 +17,14 @@ function smoothScrollToTarget(targetId: any) {
 function Home() {
   return (
     <>
-      <div>
+      <div className="font-benzin">
         <Header />
         <div className="flex flex-col items-center justify-center h-[850px] bg-[#000000] text-white p-56 relative overflow-hidden">
-          <h1 className="text-[50px] mb-8 whitespace-nowrap z-20 bg-black  rounded-2xl px-4 py-2 font-benzin">
+          <h1 className="text-[35px] mb-8 whitespace-nowrap z-20 bg-black  rounded-2xl px-4 py-2">
             EDU+ тэй туршлагаж: Хаана хөгжилтөй байна тэнд суралц!
           </h1>
-          {/* <h1 className="text-[30px] text-center z-20">
-            Experience with EDU+: Where Learning Meets Fun!
-          </h1> */}
-          {/* <h4 className="text-[15px] text-center z-20">
-            Take quizzes, challenge friends, track scores, share results, and
-            enjoy seamless fun!
-          </h4> */}
-          <h4 className="text-[30px] text-center z-20">
+
+          <h4 className="text-[20px] text-center z-20">
             Асуулт асууж, найз нөхдөөр сорих, оноо авах, үр дүнг нь хуваалцах,
             тасралтгүй хөгжилтэй өнгөрүүлээрэй!
           </h4>
@@ -40,7 +34,7 @@ function Home() {
             className="z-20"
             onClick={() => smoothScrollToTarget("tester")}
           >
-            <motion.button className="border bg-[#45F6F6] rounded-full px-4 py-2 mt-48 text-black transition-all hover:bg-[#4bffff] hover:text-[#FFC700] z-20">
+            <motion.button className="border bg-[#45F6F6] rounded-full px-4 py-2 mt-48 text-black transition-all hover:text-white z-20">
               Interactive Exploration Quiz
             </motion.button>
           </a>
@@ -57,7 +51,7 @@ function Home() {
           id="tester"
         >
           <div className="flex items-center justify-center text-bold text-[30px] pt-24 pb-8">
-            <div className="border border-black rounded-full px-4 py-2 transition-all hover:bg-black hover:text-white ">
+            <div className="border border-[#45F6F6] rounded-full px-4 py-2 transition-all hover:bg-[#45F6F6] hover:text-white ">
               Quiz topics
             </div>
           </div>
