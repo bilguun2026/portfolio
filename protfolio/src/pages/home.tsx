@@ -19,29 +19,27 @@ function Home() {
     <>
       <div className="font-benzin">
         <Header />
-        <div className="flex flex-col items-center justify-center h-[850px] bg-[#000000] text-white p-56 relative overflow-hidden">
-          <h1 className="text-[35px] mb-8 whitespace-nowrap z-20 bg-black  rounded-2xl px-4 py-2">
-            EDU+ тэй туршлагаж: Хаана хөгжилтөй байна тэнд суралц!
-          </h1>
-
-          <h4 className="text-[20px] text-center z-20">
-            Асуулт асууж, найз нөхдөөр сорих, оноо авах, үр дүнг нь хуваалцах,
-            тасралтгүй хөгжилтэй өнгөрүүлээрэй!
-          </h4>
-
-          <a
-            href="#tester"
-            className="z-20"
-            onClick={() => smoothScrollToTarget("tester")}
-          >
-            <motion.button className="border bg-[#45F6F6] rounded-full px-4 py-2 mt-48 text-black transition-all hover:text-white z-20">
-              Interactive Exploration Quiz
-            </motion.button>
-          </a>
+        <div className="flex flex-col items-center justify-center h-[850px] relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-[#45F6F6] to-[#00223e] opacity-50"></div>
+          <div className="flex flex-col items-center justify-center text-black p-56 relative z-20">
+            <h1 className="text-[36px] mb-8 whitespace-nowrap rounded-2xl px-4 py-2">
+              EDU+ тэй туршлагаж: Хаана хөгжилтөй байна тэнд суралц!
+            </h1>
+            <h4 className="text-[16px] text-center">
+              Асуулт асууж, найз нөхдөөр сорих, оноо авах, үр дүнг нь хуваалцах,
+              тасралтгүй хөгжилтэй өнгөрүүлээрэй!
+            </h4>
+            <a href="#tester" onClick={() => smoothScrollToTarget("tester")}>
+              <motion.button className="border bg-[#45F6F6] rounded-full px-4 py-2 mt-48 text-black transition-all hover:text-white">
+                Эрэл хайгуулд гарцгаая🧐
+              </motion.button>
+            </a>
+          </div>
           <div className="absolute top-0 left-0 z-10">
             <PuzzleIcons />
           </div>
         </div>
+
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

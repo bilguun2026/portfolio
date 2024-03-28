@@ -8,7 +8,7 @@ const Dropdown = () => {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="absolute right-0 mt-2 w-32 h-24 bg-white rounded-md shadow-lg z-10"
+      className="absolute right-0 mt-2 w-32 h-24 bg-white rounded-md shadow-lg z-50"
     >
       <div className="py-1">
         <Link to={"/profile"}>

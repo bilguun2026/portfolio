@@ -48,7 +48,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
                   <img className="object-cover" src={M} alt="test" />
                 </motion.div>
                 <motion.div
-                  className="col-span-1 row-span-1 border rounded-2xl w-32 h-32"
+                  className="col-span-1 row-span-1 rounded-2xl w-32 h-32"
                   whileHover={{ scale: 1.1 }}
                 >
                   <img
@@ -58,7 +58,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
                   />
                 </motion.div>
                 <motion.div
-                  className="col-span-1 row-span-1 border rounded-2xlw-32 h-32"
+                  className="col-span-1 row-span-1 rounded-2xlw-32 h-32"
                   whileHover={{ scale: 1.1 }}
                 >
                   <img
@@ -83,7 +83,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
               </div>
             </div>
             <button
-              className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+              className="mt-4 bg-[#45F6F6] hover:text-white text-black py-2 px-4 rounded"
               onClick={onClose}
             >
               Close

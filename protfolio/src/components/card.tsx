@@ -24,13 +24,13 @@ const CardComponent: React.FC<CardProps> = ({
             alt="Image"
             className="w-full h-full object-cover transition-transform duration-300 transform group-hover:scale-105"
           />
-          <div className="absolute inset-0 bg-black opacity-0 hover:opacity-70 transition-opacity duration-300 flex items-center justify-center">
-            <button className="text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline">
+          <div className="absolute inset-0 bg-[#45F6F6] opacity-0 hover:opacity-70 transition-opacity duration-300 flex items-center justify-center">
+            <button className="text-black font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline">
               Quiz бөглөх
             </button>
           </div>
         </div>
-        <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-r-2xl p-4 flex flex-col justify-between leading-normal">
+        <div className="border-r border-b border-lborder-[#45F6F6] lg:border-l-0 lg:border-t lg:border-[#45F6F6] bg-white rounded-r-2xl p-4 flex flex-col justify-between leading-normal">
           <div className="mb-8">
             <div className="text-gray-900 font-bold text-xl mb-2">{title}</div>
             <p className="text-gray-700 text-base">{description}</p>

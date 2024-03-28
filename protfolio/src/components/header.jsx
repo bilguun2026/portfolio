@@ -48,7 +48,7 @@ function Header() {
               className="absolute left-3 top-6.5 text-gray-500"
             />
             <motion.input
-              className="pl-10 shadow appearance-none border border-[#000000] rounded-full w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="pl-10 shadow appearance-none border border-[#45F6F6] rounded-full w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="search"
               type="text"
               placeholder="Search"
@@ -70,18 +70,16 @@ function Header() {
             />
             {showDropdown && <Dropdown />}
           </div>
-          <Link to={"/profile"}>
-            <motion.button
-              className="shadow appearance-none border text-black bg-[#45F6F6] rounded-full py-1 px-6 md:px-12 truncate transition-all hover:bg-white hover:text-black hover:border-black"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.8, duration: 0.5 }}
-            >
-              Upgrade: Free 14 days trial
-            </motion.button>
-          </Link>
+          <motion.button
+            className="shadow appearance-none border text-white bg-[#45F6F6] rounded-full py-1 px-6 md:px-12 truncate transition-all hover:bg-white hover:text-black hover:border-[#45F6F6]"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.8, duration: 0.5 }}
+          >
+            Upgrade: Free 14 days trial
+          </motion.button>
         </div>
       </div>
     </div>
