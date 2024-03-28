@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { User } from "./signUp";
 import Header from "../components/header";
 import { FiEdit } from "react-icons/fi";
 import profile from "../assets/profile.jpg";
+import Modal from "../components/modal";
 
 const Profile: React.FC<User> = ({ email, firstName }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
   return (
     <>
       <Header />
@@ -90,6 +100,7 @@ const Profile: React.FC<User> = ({ email, firstName }) => {
               whileHover={{ scale: 1.1 }} // Increase scale on hover
               whileTap={{ scale: 0.9 }} // Decrease scale on tap
               transition={{ duration: 0.2 }} // Smooth transition duration
+              onClick={openModal}
             >
               Premium хэрэглэгч болох
             </motion.button>
@@ -110,6 +121,7 @@ const Profile: React.FC<User> = ({ email, firstName }) => {
           </motion.div>
         </div>
       </motion.div>
+      <Modal isOpen={isModalOpen} onClose={closeModal} children={undefined} />
     </>
   );
 };
