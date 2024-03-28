@@ -9,6 +9,10 @@ import KnowledgeQuizPage from "./pages/knowledgeQuiz";
 import { ContextProvider } from "./context/quizContext";
 import { FlashcardProvider } from "./context/flashcardContext";
 import FlashcardMakerPage from "./pages/Flashcard";
+import HistoryQuizPage from "./pages/HistoryQuiz";
+import MathQuizPage from "./pages/MathQuiz";
+import ScienceQuizPage from "./pages/ScienceQuiz";
+import ArtQuizPage from "./pages/ArtQuiz";
 import Profile from "./pages/profile";
 
 interface User {
@@ -65,9 +69,13 @@ const App: React.FC = () => {
               element={<Sign users={users} handleSignup={handleSignup} />}
             />
             <Route path="/map" element={<CountriesQuizPage />} />
+            <Route path="/math" element={<MathQuizPage />} />
+            <Route path="/Science" element={<ScienceQuizPage />} />
             <Route path="/knowledge" element={<KnowledgeQuizPage />} />
+            <Route path="/history" element={<HistoryQuizPage />} />
             <Route path="/flashcard" element={<FlashcardMakerPage />} />
-            <Route path="/profile" element={<Profile id={0} firstName={"Luka"} email={"Luka123@gmail.com"} password={"123"} />} />
+            <Route path="/art" element={<ArtQuizPage />} />
+            <Route path="/profile" element={<Profile id={0} firstName={"gege"} email={"gege"} password={"gege"} />} />
             {/* <Route path="users/:id" element={<Users />} /> */}
           </Routes>
         </FlashcardProvider>
