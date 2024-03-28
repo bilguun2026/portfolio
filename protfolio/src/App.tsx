@@ -9,6 +9,7 @@ import KnowledgeQuizPage from "./pages/knowledgeQuiz";
 import { ContextProvider } from "./context/quizContext";
 import { FlashcardProvider } from "./context/flashcardContext";
 import FlashcardMakerPage from "./pages/Flashcard";
+import Profile from "./pages/profile";
 
 interface User {
   id: number;
@@ -66,6 +67,7 @@ const App: React.FC = () => {
             <Route path="/map" element={<CountriesQuizPage />} />
             <Route path="/knowledge" element={<KnowledgeQuizPage />} />
             <Route path="/flashcard" element={<FlashcardMakerPage />} />
+            <Route path="/profile" element={<Profile id={0} firstName={"gege"} email={"gege"} password={"gege"} />} />
             {/* <Route path="users/:id" element={<Users />} /> */}
           </Routes>
         </FlashcardProvider>
