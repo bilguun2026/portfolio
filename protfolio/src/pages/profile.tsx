@@ -46,7 +46,7 @@ const Profile: React.FC<User> = ({ email, firstName }) => {
                 </motion.div>
               </div>
               <div className="flex flex-row justify-between">
-                <div className="flex flex-row">Утас: {email}</div>
+                <div className="flex flex-row">Утас: 88888888</div>
                 <motion.div
                   whileHover={{ scale: 1.1 }} // Example hover animation, adjust as needed
                   whileTap={{ scale: 0.9 }} // Example tap animation, adjust as needed
@@ -94,19 +94,11 @@ const Profile: React.FC<User> = ({ email, firstName }) => {
             </motion.button>
           </div>
         </div>
-        <div className="px-4 py-2 w-[1000px] h-[700px] bg-red-900 rounded-2xl">
+        <div className="p-8 w-[1000px] h-[700px] bg-[#999090] rounded-2xl flex flex-col">
           <div className="flex items-center justify-between">
             <div className="flex flex-col">
-              <span className="text-lg font-bold">{firstName}</span>
-              <span className="text-sm text-gray-600">{email}</span>
+              <span className="text-lg font-bold text-white">Recent</span>
             </div>
-            <motion.img
-              src="https://via.placeholder.com/150"
-              alt="Profile"
-              className="h-16 w-16 rounded-full"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            />
           </div>
         </div>
       </motion.div>
