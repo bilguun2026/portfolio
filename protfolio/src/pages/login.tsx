@@ -5,7 +5,7 @@ import { Navigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import apple from "../assets/apple.png";
 import google from "../assets/google.png";
-import hero from "../assets/hero.png";
+import hero from "../assets/hero.jpeg";
 import fb from "../assets/fb.png";
 interface User {
   id: number;
@@ -165,7 +165,7 @@ function Login({ isLoggedIn, handleLogin }: LoginProps) {
             </motion.div>
           </div>
           <div className="col-span-1 flex items-center justify-center">
-            <motion.img src={hero} className="" />
+            <motion.img src={hero} className="w-[700px] h-[546px] rounded-2xl object-cover" />
           </div>
         </motion.div>
         <motion.div

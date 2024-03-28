@@ -63,7 +63,7 @@ const App: React.FC = () => {
               path="/signup"
               element={<Sign users={users} handleSignup={handleSignup} />}
             />
-            <Route path="/countries" element={<CountriesQuizPage />} />
+            <Route path="/map" element={<CountriesQuizPage />} />
             <Route path="/knowledge" element={<KnowledgeQuizPage />} />
             <Route path="/flashcard" element={<FlashcardMakerPage />} />
             {/* <Route path="users/:id" element={<Users />} /> */}
