@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
-import { AiFillLock } from "react-icons/ai"; // Importing lock icon
+import { Link } from "react-router-dom";
+import { AiFillLock } from "react-icons/ai";
 
 interface CardProps {
   imageUrl: string;
