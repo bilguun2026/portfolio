@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { User } from "./signUp";
 import Header from "../components/header";
 import { FiEdit } from "react-icons/fi";
+import profile from "../assets/profile.jpg"
 
 const Profile: React.FC<User> = ({ email, firstName }) => {
   return (
@@ -19,9 +20,9 @@ const Profile: React.FC<User> = ({ email, firstName }) => {
           <div className="px-4 py-2 w-96 h-[500px] bg-zinc-700 rounded-2xl flex flex-col">
             <div className="flex flex-col items-center justify-between">
               <motion.img
-                src="https://via.placeholder.com/150"
+                src={profile}
                 alt="Profile"
-                className="h-48 w-48 rounded-full mt-4"
+                className="h-48 w-48 rounded-full mt-4 object-cover"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               />
