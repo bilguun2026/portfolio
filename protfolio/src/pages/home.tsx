@@ -6,6 +6,7 @@ import scie from "../assets/science-quiz@2x.png";
 import hist from "../assets/history--quiz@2x.png";
 import art from "../assets/rectangle-15@2x.png";
 import math from "../assets/math--quiz@2x.png";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -65,12 +66,14 @@ function Home() {
           </motion.button>
         </div>
         <div className="grid grid-cols-3 grid-rows-2 px-12 h-auto justify-items-center items-center space-y-4">
-          <div className="w-[350px] h-[380px] rounded-xl flex flex-col items-center justify-center relative">
-            <div className="absolute border border-zinc-400 bottom-0 bg-white rounded-t-2xl w-full h-24 z-10 shadow-inner flex items-center justify-center">
-              Газрын зураг
+          <Link to="/countries">
+            <div className="w-[350px] h-[380px] rounded-xl flex flex-col items-center justify-center relative">
+              <div className="absolute border border-zinc-400 bottom-0 bg-white rounded-t-2xl w-full h-24 z-10 shadow-inner flex items-center justify-center">
+                Газрын зураг
+              </div>
+              <img src={flag} className="absolute top-0" />
             </div>
-            <img src={flag} className="absolute top-0" />
-          </div>
+          </Link>
           <div className="w-[350px] h-[380px] rounded-xl flex flex-col items-center justify-center relative">
             <img src={comp} className="absolute top-0" />
             <div className="absolute border border-zinc-400 bottom-0 bg-white rounded-t-2xl w-full h-24 z-10 shadow-inner flex items-center justify-center">

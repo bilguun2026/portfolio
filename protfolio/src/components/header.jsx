@@ -5,6 +5,8 @@ import add from "../assets/add.svg";
 import notify from "../assets/notifications.svg";
 import person from "../assets/personcircle.svg";
 import burger from "../assets/reorderfour.svg";
+import { Link } from "react-router-dom";
+import Home from "../pages/home";
 function Header() {
   return (
     <>
@@ -16,7 +18,9 @@ function Header() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.5 }}
           >
-            <div className="text-right">EDU+</div>
+            <Link to="/">
+              <div className="text-right">EDU+</div>
+            </Link>
           </motion.div>
         </div>
         <div className="flex flex-row font-sans text-sm md:text-base">
