@@ -38,13 +38,13 @@ const QuestionComponent: React.FC<QuestionComponentProps> = ({
         {question.answers.map((answer) => (
           <motion.button
             key={answer.id}
-            className="bg-[#47EBEB] text-white font-semibold py-2 px-4 rounded-md transition duration-300"
+            className="bg-[#47EBEB] text-white font-semibold py-2 px-4 rounded-md transition duration-300 hover:bg-[#2E8B57] hover:shadow-md"
             onClick={() => {
               handleAnswerClick(answer);
               handleQuestionClick(question);
             }}
             whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.90 }}
+            whileTap={{ scale: 0.9 }}
             transition={{ duration: 0.2 }}
           >
             {answer.text}

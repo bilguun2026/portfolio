@@ -6,12 +6,28 @@ import notify from "../assets/notifications.svg";
 import person from "../assets/personcircle.svg";
 import burger from "../assets/reorderfour.svg";
 import { Link } from "react-router-dom";
-import Home from "../pages/home";
+
 function Header() {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <>
-      <div className="grid grid-cols-1 md:grid-cols-3 border-b border-zinc-900 shadow-md">
-        <div className="flex flex-row">
+    <div
+      className={`sticky top-0 z-50 ${
+        scrollY === 0 ? "bg-transparent" : "bg-white"
+      }`}
+    >
+      <div className="grid grid-cols-1 md:grid-cols-3 shadow-md">
+        <div className="flex flex-row items-center justify-center md:justify-start">
           <motion.div
             className="font-sans font-semibold text-2xl md:text-4xl grid grid-cols-2 p-4 px-8 md:px-16"
             initial={{ opacity: 0, y: -20 }}
@@ -23,7 +39,7 @@ function Header() {
             </Link>
           </motion.div>
         </div>
-        <div className="flex flex-row font-sans text-sm md:text-base">
+        <div className="flex flex-row items-center">
           <div className="relative w-full flex items-center">
             <BiSearch
               size={24}
@@ -31,9 +47,9 @@ function Header() {
             />
             <motion.input
               className="pl-10 shadow appearance-none border border-[#40DBDB] rounded-full w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="Password"
+              id="search"
               type="text"
-              placeholder="Password"
+              placeholder="Search"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.6, duration: 0.5 }}
@@ -42,9 +58,9 @@ function Header() {
         </div>
         <div className="flex flex-row items-center justify-center space-x-6 md:justify-end md:px-8">
           <Link to="/flashcard">
-          <motion.img src={add} />
+            <motion.img src={add} className="cursor-pointer" />
           </Link>
-          <motion.img src={person} />
+          <motion.img src={person} className="cursor-pointer" />
           <motion.button
             className="shadow appearance-none border bg-[#40DBDB] rounded-full py-1 px-6 md:px-12 truncate"
             whileHover={{ scale: 1.1 }}
@@ -57,7 +73,7 @@ function Header() {
           </motion.button>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
