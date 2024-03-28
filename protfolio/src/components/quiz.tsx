@@ -72,13 +72,22 @@ const Quiz: React.FC<QuizProps> = ({ quiz, onAnswerSelected }) => {
   const currentQuestion = quiz.questions[currentQuestionIndex];
 
   return (
-    <div className="max-w-lg mx-auto p-4 bg-white shadow-md rounded-md">
+    <div className="max-w-lg mx-auto p-6 bg-white shadow-md rounded-md border border-gray-200">
       <Timer durationInSeconds={30} onTimeExpired={handleTimeExpired} />
+<<<<<<< HEAD
       <QuestionComponent
         question={currentQuestion}
         onAnswerSelected={handleAnswerSelected}
       />
       <Button />
+=======
+      <div className="border-t border-gray-200 pt-4">
+        <QuestionComponent
+          question={currentQuestion}
+          onAnswerSelected={handleAnswerSelected}
+        />
+      </div>
+>>>>>>> 44ddfbcd9d94a5451f519cc345b71f84d555feac
     </div>
   );
 };
