@@ -24,9 +24,7 @@ function Header() {
 
   return (
     <div
-      className={`sticky top-0 z-50 ${
-        scrollY === 0 ? "bg-transparent" : "bg-white"
-      }`}
+      className={`sticky top-0 z-50 ${scrollY === 0 ? "sticky" : "bg-white"}`}
     >
       <div className="grid grid-cols-1 md:grid-cols-3 shadow-md">
         <div className="flex flex-row items-center justify-center md:justify-start">
@@ -70,16 +68,18 @@ function Header() {
             />
             {showDropdown && <Dropdown />}
           </div>
-          <motion.button
-            className="shadow appearance-none border text-white bg-[#45F6F6] rounded-full py-1 px-6 md:px-12 truncate transition-all hover:bg-white hover:text-black hover:border-[#45F6F6]"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.8, duration: 0.5 }}
-          >
-            Upgrade: Free 14 days trial
-          </motion.button>
+          <Link to={"/profile"}>
+            <motion.button
+              className="shadow appearance-none border text-white bg-[#45F6F6] rounded-full py-1 px-6 md:px-12 truncate transition-all hover:bg-white hover:text-black hover:border-[#45F6F6]"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.8, duration: 0.5 }}
+            >
+              Upgrade: Free 14 days trial
+            </motion.button>
+          </Link>
         </div>
       </div>
     </div>
