@@ -2,6 +2,7 @@ import Header from "../components/header";
 import CardComponent from "../components/card";
 import cardData from "../data/homeCardData";
 import { motion } from "framer-motion";
+import PuzzleIcons from "../components/puzzle";
 
 function smoothScrollToTarget(targetId: any) {
   const targetElement = document.getElementById(targetId);
@@ -18,19 +19,22 @@ function Home() {
     <>
       <div>
         <Header />
-        <div className="flex flex-col items-center justify-center h-[850px] bg-black text-white p-56">
-          <h1 className="text-[60px] mb-8 whitespace-nowrap">
+        <div className="flex flex-col items-center justify-center h-[850px] bg-[#000000] text-white p-56 relative overflow-hidden">
+          <h1 className="text-[60px] mb-8 whitespace-nowrap z-20 bg-black  rounded-2xl px-4 py-2">
             Experience EDU+: Where Learning Meets Fun!
           </h1>
-          <h4 className="text-[30px] text-center">
+          <h4 className="text-[30px] text-center z-20">
             Take quizzes, challenge friends, track scores, share results, and
             enjoy seamless fun!
           </h4>
-          <a href="#tester" onClick={() => smoothScrollToTarget("tester")}>
-            <motion.button className="border border-white rounded-full px-4 py-2 mt-48 transition-all hover:bg-white hover:text-black">
+          <a href="#tester" className="z-20" onClick={() => smoothScrollToTarget("tester")}>
+            <motion.button className="border border-white rounded-full px-4 py-2 mt-48 transition-all hover:bg-white hover:text-black z-20">
               Interactive Exploration Quiz
             </motion.button>
           </a>
+          <div className="absolute top-0 left-0 z-10">
+            <PuzzleIcons />
+          </div>
         </div>
         <motion.div
           initial={{ opacity: 0 }}
@@ -40,8 +44,10 @@ function Home() {
           className="h-screen mb-4"
           id="tester"
         >
-          <div className="flex items-center justify-center p-4 text-bold text-[50px]">
-            Quiz topics
+          <div className="flex items-center justify-center text-bold text-[30px] pt-24 pb-8">
+            <div className="border border-black rounded-full px-4 py-2 transition-all hover:bg-black hover:text-white ">
+              Quiz topics
+            </div>
           </div>
           <div className="grid grid-cols-3 grid-rows-2 px-12 h-auto justify-items-center items-center space-y-4 space-x-4">
             {cardData.map((item) => (

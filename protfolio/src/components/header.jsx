@@ -6,9 +6,11 @@ import notify from "../assets/notifications.svg";
 import person from "../assets/personcircle.svg";
 import burger from "../assets/reorderfour.svg";
 import { Link } from "react-router-dom";
+import Dropdown from "./dropdown";
 
 function Header() {
   const [scrollY, setScrollY] = useState(0);
+  const [showDropdown, setShowDropdown] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,7 +48,7 @@ function Header() {
               className="absolute left-3 top-6.5 text-gray-500"
             />
             <motion.input
-              className="pl-10 shadow appearance-none border border-[#40DBDB] rounded-full w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="pl-10 shadow appearance-none border border-[#000000] rounded-full w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="search"
               type="text"
               placeholder="Search"
@@ -60,9 +62,16 @@ function Header() {
           <Link to="/flashcard">
             <motion.img src={add} className="cursor-pointer" />
           </Link>
-          <motion.img src={person} className="cursor-pointer" />
+          <div className="relative">
+            <motion.img
+              src={person}
+              className="cursor-pointer"
+              onClick={() => setShowDropdown(!showDropdown)}
+            />
+            {showDropdown && <Dropdown />}
+          </div>
           <motion.button
-            className="shadow appearance-none border bg-[#40DBDB] rounded-full py-1 px-6 md:px-12 truncate"
+            className="shadow appearance-none border text-white bg-[#000000] rounded-full py-1 px-6 md:px-12 truncate transition-all hover:bg-white hover:text-black hover:border-black"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             initial={{ opacity: 0, scale: 0.9 }}
