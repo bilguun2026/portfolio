@@ -26,7 +26,7 @@ const CardComponent: React.FC<CardProps> = ({
           />
           <div className="absolute inset-0 bg-black opacity-0 hover:opacity-70 transition-opacity duration-300 flex items-center justify-center">
             <button className="text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline">
-              View Details
+              Quiz бөглөх
             </button>
           </div>
         </div>

@@ -20,9 +20,6 @@ const ResultComponent: React.FC = () => {
           {lastTenQuestions.map((question: Question, index: number) => (
             <li key={index} className="py-4">
               <div className="flex items-start mb-2">
-                <span className="text-lg font-semibold mr-2">{`Question ${
-                  index + 1
-                }:`}</span>
                 <p className="text-lg font-semibold">{question.text}</p>
               </div>
               <p
