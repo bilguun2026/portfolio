@@ -20,15 +20,19 @@ function Home() {
       <div>
         <Header />
         <div className="flex flex-col items-center justify-center h-[850px] bg-[#000000] text-white p-56 relative overflow-hidden">
-          <h1 className="text-[50px] mb-8 whitespace-nowrap z-20 bg-black  rounded-2xl px-4 py-2">
+          <h1 className="text-[50px] mb-8 whitespace-nowrap z-20 bg-black  rounded-2xl px-4 py-2 font-benzin">
             EDU+ тэй туршлагаж: Хаана хөгжилтөй байна тэнд суралц!
           </h1>
-          <h1 className="text-[30px] text-center z-20">
+          {/* <h1 className="text-[30px] text-center z-20">
             Experience with EDU+: Where Learning Meets Fun!
-          </h1>
-          <h4 className="text-[15px] text-center z-20">
+          </h1> */}
+          {/* <h4 className="text-[15px] text-center z-20">
             Take quizzes, challenge friends, track scores, share results, and
             enjoy seamless fun!
+          </h4> */}
+          <h4 className="text-[30px] text-center z-20">
+            Асуулт асууж, найз нөхдөөр сорих, оноо авах, үр дүнг нь хуваалцах,
+            тасралтгүй хөгжилтэй өнгөрүүлээрэй!
           </h4>
 
           <a
@@ -36,7 +40,7 @@ function Home() {
             className="z-20"
             onClick={() => smoothScrollToTarget("tester")}
           >
-            <motion.button className="border border-white rounded-full px-4 py-2 mt-48 transition-all hover:bg-white hover:text-black z-20">
+            <motion.button className="border bg-[#45F6F6] rounded-full px-4 py-2 mt-48 text-black transition-all hover:bg-[#4bffff] hover:text-[#FFC700] z-20">
               Interactive Exploration Quiz
             </motion.button>
           </a>
