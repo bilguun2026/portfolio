@@ -9,49 +9,49 @@ const cardData = [
   {
     id: 1,
     imageUrl: map,
-    title: "Can coffee make you a better developer?",
+    title: "Газрын зураг",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.",
+      "Энэ хүү асуултууд нь таныг хэр олон улс орон мэддэг вэ гэдгийг шалгах хүндхэн асуултууд байх болно.",
     url: "/map", // Example URL for navigation
   },
   {
     id: 2,
     imageUrl: math,
-    title: "The benefits of remote work",
+    title: "Математик",
     description:
-      "Discover the advantages of remote work and how it can improve productivity and work-life balance.",
+      "Та математиктаа хэр сайн бэ? Өөрийгөө сориод үзээрэй. Хэцүүхэн байх болов уу.",
     url: "/math",
   },
   {
     id: 3,
     imageUrl: science,
-    title: "Introduction to React Hooks",
+    title: "Шинжлэх ухаан",
     description:
-      "Learn about React Hooks and how they simplify state management and side effects in React applications.",
+      "Шинжлэх ухааны салбар бол хамгийн баялаг хязгааргүйд тооцогддог. Шинжлэх ухаанд хайртай бол өөрийгөө сориод үз.",
     url: "/science",
   },
   {
     id: 4,
     imageUrl: art,
-    title: "Mastering CSS Grid Layout",
+    title: "Уран зураг",
     description:
-      "Unlock the power of CSS Grid Layout and create responsive and flexible layouts for your web projects.",
+      "Дэлхийн болон дотоодын алдартай уран зургууд байх болно. Өөөөрийгөөөөөн сорь.",
     url: "/art",
   },
   {
     id: 5,
     imageUrl: history,
-    title: "The art of debugging in JavaScript",
+    title: "Түүх",
     description:
-      "Explore strategies and techniques for effective debugging in JavaScript to squash bugs more efficiently.",
+      "Түүхийн хичээлдээ муу байсан ч хамаагүй ээ. Эдгээр асуултууд нь машид сонрирхолтой байх болно.",
     url: "/history",
   },
   {
     id: 6,
     imageUrl: knowledge,
-    title: "Getting started with TypeScript",
+    title: "Мэдлэг",
     description:
-      "Get up and running with TypeScript and enhance your JavaScript projects with static typing and other features.",
+      "Та өөрийгөө хэр мэдлэгтэй гэж бодож байна. Миний бодлоор та тийм ч сайн мэдлэгтэй биш юм шиг л .... алив батлалдаа.",
     url: "/knowledge",
   },
 ];
