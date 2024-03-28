@@ -173,7 +173,7 @@ function Login({ isLoggedIn, handleLogin }: LoginProps) {
               />
             </motion.div>
           </div>
-          <div className="hidden md:block col-span-1 md:col-span-1 w-full h-[424px] flex items-center justify-center">
+          <div className=" md:block col-span-1 md:col-span-1 w-full h-[424px] flex items-center justify-center">
             <motion.img
               src={hero}
               className="w-full h-full rounded-2xl object-cover"
