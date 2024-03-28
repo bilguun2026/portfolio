@@ -20,13 +20,15 @@ const Dropdown = () => {
             Profile
           </motion.button>
         </Link>
-        <motion.button
-          whileHover={{ scale: 0.9 }}
-          whileTap={{ scale: 1 }}
-          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-300 w-full text-left"
-        >
-          Logout
-        </motion.button>
+        <Link to={"/login"}>
+          <motion.button
+            whileHover={{ scale: 0.9 }}
+            whileTap={{ scale: 1 }}
+            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-300 w-full text-left"
+          >
+            Logout
+          </motion.button>
+        </Link>
       </div>
     </motion.div>
   );
