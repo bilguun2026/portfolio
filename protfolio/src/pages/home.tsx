@@ -19,18 +19,18 @@ function Home() {
     <>
       <div className="font-benzin">
         <Header />
-        <div className="flex flex-col items-center justify-center h-[850px] relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#45F6F6] to-[#00223e] opacity-50"></div>
-          <div className="flex flex-col items-center justify-center text-black p-56 relative z-20">
-            <h1 className="text-[36px] mb-8 whitespace-nowrap rounded-2xl px-4 py-2">
+
+        <div className="flex flex-col items-center justify-center h-[850px] bg-gradient-to-br from-[#45F6F6] to-[#00223e] relative overflow-hidden">
+          <div className="flex flex-col items-center justify-center text-black p-56 relative ">
+            <h1 className="text-[36px] mb-8 whitespace-nowrap rounded-2xl px-4 py-2 z-20">
               EDU+ тэй туршлагаж: Хаана хөгжилтөй байна тэнд суралц!
             </h1>
-            <h4 className="text-[16px] text-center">
+            <h4 className="text-[16px] text-center z-20">
               Асуулт асууж, найз нөхдөөр сорих, оноо авах, үр дүнг нь хуваалцах,
               тасралтгүй хөгжилтэй өнгөрүүлээрэй!
             </h4>
             <a href="#tester" onClick={() => smoothScrollToTarget("tester")}>
-              <motion.button className="border bg-[#45F6F6] rounded-full px-4 py-2 mt-48 text-black transition-all hover:text-white">
+              <motion.button className="border bg-[#45F6F6] rounded-full px-4 py-2 mt-48 text-black transition-all hover:text-white z-20">
                 Эрэл хайгуулд гарцгаая🧐
               </motion.button>
             </a>
