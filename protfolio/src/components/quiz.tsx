@@ -8,6 +8,7 @@ import QuestionComponent from "./question";
 import Timer from "./timer";
 import { useMyContext } from "../context/quizContext";
 import ResultComponent from "./result";
+import Button from "./button3";
 
 interface QuizProps {
   quiz: QuizType;
@@ -63,6 +64,7 @@ const Quiz: React.FC<QuizProps> = ({ quiz, onAnswerSelected }) => {
           </button>
         </div>
         <ResultComponent />
+        <Button />
       </div>
     );
   }
@@ -72,12 +74,12 @@ const Quiz: React.FC<QuizProps> = ({ quiz, onAnswerSelected }) => {
   return (
     <div className="max-w-lg mx-auto p-6 bg-white shadow-md rounded-md border border-gray-200">
       <Timer durationInSeconds={30} onTimeExpired={handleTimeExpired} />
-      <div className="border-t border-gray-200 pt-4">
-        <QuestionComponent
-          question={currentQuestion}
-          onAnswerSelected={handleAnswerSelected}
-        />
-      </div>
+
+      <QuestionComponent
+        question={currentQuestion}
+        onAnswerSelected={handleAnswerSelected}
+      />
+      <Button />
     </div>
   );
 };

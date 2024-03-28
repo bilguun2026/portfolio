@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        benzin: ["benzin"],
+        benzin: ['benzin', 'sans-serif'],
       },
     },
   },
