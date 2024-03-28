@@ -7,6 +7,8 @@ import CountriesQuizPage from "./pages/countriesQuiz";
 import { calcLength } from "framer-motion";
 import KnowledgeQuizPage from "./pages/knowledgeQuiz";
 import { ContextProvider } from "./context/quizContext";
+import { FlashcardProvider } from "./context/flashcardContext";
+import FlashcardMakerPage from "./pages/Flashcard";
 
 interface User {
   id: number;
@@ -48,22 +50,25 @@ const App: React.FC = () => {
   return (
     <BrowserRouter>
       <ContextProvider>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route
-            path="/login"
-            element={
-              <Login isLoggedIn={isLoggedIn} handleLogin={handleLogin} />
-            }
-          />
-          <Route
-            path="/signup"
-            element={<Sign users={users} handleSignup={handleSignup} />}
-          />
-          <Route path="/countries" element={<CountriesQuizPage />} />
-          <Route path="/knowledge" element={<KnowledgeQuizPage />} />
-          {/* <Route path="users/:id" element={<Users />} /> */}
-        </Routes>
+        <FlashcardProvider>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route
+              path="/login"
+              element={
+                <Login isLoggedIn={isLoggedIn} handleLogin={handleLogin} />
+              }
+            />
+            <Route
+              path="/signup"
+              element={<Sign users={users} handleSignup={handleSignup} />}
+            />
+            <Route path="/countries" element={<CountriesQuizPage />} />
+            <Route path="/knowledge" element={<KnowledgeQuizPage />} />
+            <Route path="/flashcard" element={<FlashcardMakerPage />} />
+            {/* <Route path="users/:id" element={<Users />} /> */}
+          </Routes>
+        </FlashcardProvider>
       </ContextProvider>
     </BrowserRouter>
   );

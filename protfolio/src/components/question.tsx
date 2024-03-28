@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import {
   Question as QuestionType,
   Answer,
@@ -27,23 +28,30 @@ const QuestionComponent: React.FC<QuestionComponentProps> = ({
   };
 
   return (
-    <div>
-      <h2 className="text-lg font-semibold mb-4">{question.text}</h2>
-      <ul className="space-y-2">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
+      <h2 className="text-[50px] font-semibold mb-4">{question.text}</h2>
+      <div className="grid grid-cols-2 gap-4">
         {question.answers.map((answer) => (
-          <li
+          <motion.button
             key={answer.id}
-            className="block cursor-pointer bg-blue-500 text-white font-semibold py-2 px-4 rounded-md transition duration-300 hover:bg-blue-600"
+            className="bg-[#47EBEB] text-white font-semibold py-2 px-4 rounded-md transition duration-300"
             onClick={() => {
               handleAnswerClick(answer);
               handleQuestionClick(question);
             }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.90 }}
+            transition={{ duration: 0.2 }}
           >
             {answer.text}
-          </li>
+          </motion.button>
         ))}
-      </ul>
-    </div>
+      </div>
+    </motion.div>
   );
 };
 

@@ -22,15 +22,15 @@ const CountriesQuizPage: React.FC = () => {
   return (
     <>
       <Header />
-      <div className="max-w-xl mx-auto py-8">
-        <h1 className="text-3xl font-bold mb-4">Countries Quiz</h1>
-        {currentQuizIndex < countriesQuizzes.length && (
-          <Quiz
-            quiz={countriesQuizzes[currentQuizIndex]}
-            onAnswerSelected={handleAnswerSelected}
-          />
-        )}
+      <div className="max-w-xl mx-auto py-8 flex justify-center">
+        <h1 className="text-3xl font-bold mb-4">Map Quiz</h1>
       </div>
+      {currentQuizIndex < countriesQuizzes.length && (
+        <Quiz
+          quiz={countriesQuizzes[currentQuizIndex]}
+          onAnswerSelected={handleAnswerSelected}
+        />
+      )}
     </>
   );
 };
