@@ -13,6 +13,7 @@ import HistoryQuizPage from "./pages/HistoryQuiz";
 import MathQuizPage from "./pages/MathQuiz";
 import ScienceQuizPage from "./pages/ScienceQuiz";
 import ArtQuizPage from "./pages/ArtQuiz";
+import Profile from "./pages/profile";
 
 interface User {
   id: number;
@@ -74,6 +75,7 @@ const App: React.FC = () => {
             <Route path="/history" element={<HistoryQuizPage />} />
             <Route path="/flashcard" element={<FlashcardMakerPage />} />
             <Route path="/art" element={<ArtQuizPage />} />
+            <Route path="/profile" element={<Profile id={0} firstName={"gege"} email={"gege"} password={"gege"} />} />
             {/* <Route path="users/:id" element={<Users />} /> */}
           </Routes>
         </FlashcardProvider>
