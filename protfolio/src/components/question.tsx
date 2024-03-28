@@ -32,13 +32,14 @@ const QuestionComponent: React.FC<QuestionComponentProps> = ({
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
+      className="p-4"
     >
       <h2 className="text-[50px] font-semibold mb-4">{question.text}</h2>
       <div className="grid grid-cols-2 gap-4">
         {question.answers.map((answer) => (
           <motion.button
             key={answer.id}
-            className="bg-[#47EBEB] text-white font-semibold py-2 px-4 rounded-md transition duration-300 hover:bg-[#2E8B57] hover:shadow-md"
+            className="bg-[#47EBEB] text-white font-semibold py-3 px-6 rounded-lg transition duration-300 hover:bg-[#2E8B57] hover:shadow-md"
             onClick={() => {
               handleAnswerClick(answer);
               handleQuestionClick(question);

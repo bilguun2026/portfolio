@@ -7,12 +7,6 @@ import apple from "../assets/apple.png";
 import google from "../assets/google.png";
 import hero from "../assets/hero.jpeg";
 import fb from "../assets/fb.png";
-interface User {
-  id: number;
-  firstName: string;
-  email: string;
-  password: string;
-}
 
 interface LoginProps {
   isLoggedIn: boolean;
@@ -42,47 +36,49 @@ function Login({ isLoggedIn, handleLogin }: LoginProps) {
   return (
     <>
       <motion.div
-        className="grid grid-cols-5 grid-rows-5 bg-gradient-to-b h-screen from-[#40DBDB] to-[#ffffff]"
-        initial={{ opacity: 0 }} // Initial animation state
-        animate={{ opacity: 1 }} // Animation to run when component mounts
-        transition={{ duration: 0.5 }} // Animation transition duration
+        className="grid grid-cols-1 md:grid-cols-5 grid-rows-5 bg-gradient-to-b h-screen from-[#40DBDB] to-[#ffffff]"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
       >
         <motion.div
-          className="col-span-1 row-span-1 font-sans text-[45px] grid grid-cols-2 p-8"
-          initial={{ opacity: 0, y: -20 }} // Initial animation state
-          animate={{ opacity: 1, y: 0 }} // Animation to run when component mounts
-          transition={{ delay: 0.2, duration: 0.5 }} // Animation transition duration and delay
+          className="col-span-1 md:col-span-1 row-span-1 md:row-span-1 font-sans text-[45px] md:text-3xl grid grid-cols-2 p-8"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
         >
-          <div className="col-span-1 text-right">EDU</div>
-          <div className="col-span-1 pt-8 w-8 h-8 flex items-center justify-center">
+          <div className="col-span-1 text-center md:text-right md:col-span-1 md:col-start-1">
+            EDU
+          </div>
+          <div className="col-span-1 pt-4 w-4 h-2 flex items-center justify-center">
             +
           </div>
         </motion.div>
         <motion.div
-          className="z-10 col-span-3 row-span-3 row-start-2 col-start-2 font-sans grid grid-cols-2"
-          initial={{ opacity: 0, scale: 0.9 }} // Initial animation state
-          animate={{ opacity: 1, scale: 1 }} // Animation to run when component mounts
-          transition={{ delay: 0.4, duration: 0.5 }} // Animation transition duration and delay
+          className="z-10 col-span-3 row-span-3 md:row-span-1.5 row-start-2 col-start-2 font-sans grid grid-cols-1 md:grid-cols-2"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.4, duration: 0.5 }}
         >
-          <div className="col-span-1 flex-col items-center justify-center pt-[88px] ">
-            <div className="flex items-center justify-center text-[20px]  px-4">
+          <div className="col-span-1 md:flex md:flex-col md:items-center md:justify-center pt-8 md:pt-6">
+            <div className="flex items-center justify-center text-[18px] px-2">
               Welcome to EDU+
             </div>
-            <div className="flex items-center justify-center text-[20px] pt-[50px] px-4">
+            <div className="flex items-center justify-center text-[18px] pt-2 md:pt-[30px] px-2">
               Sign in
             </div>
-            <div className="flex items-center justify-center text-[20px] pt-[5px] px-4">
-              <div className="mb-4">
+            <div className="flex items-center justify-center text-[18px] pt-[5px] px-2">
+              <div className="mb-2">
                 <label
-                  className="block text-gray-700 text-sm font-bold"
-                  htmlFor={"email"}
+                  className="block text-gray-700 text-xs font-bold"
+                  htmlFor="email"
                 >
                   Email
                 </label>
                 <div className="relative">
-                  <HiOutlineMail className="absolute left-3 top-3 text-gray-500" />
+                  <HiOutlineMail className="absolute left-2 top-2 text-gray-500" />
                   <motion.input
-                    className="pl-10 shadow appearance-none border border-[#40DBDB] rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    className="pl-8 shadow appearance-none border border-[#40DBDB] rounded-lg w-full py-1 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-sm"
                     id="email"
                     type="text"
                     placeholder="Email"
@@ -95,20 +91,20 @@ function Login({ isLoggedIn, handleLogin }: LoginProps) {
                 </div>
               </div>
             </div>
-            <div className="flex items-center justify-center text-[20px]  px-4">
-              <div className="mb-4">
+            <div className="flex items-center justify-center text-[18px] px-2">
+              <div className="mb-2">
                 <label
-                  className="block text-gray-700 text-sm font-bold"
-                  htmlFor={"Password"}
+                  className="block text-gray-700 text-xs font-bold"
+                  htmlFor="password"
                 >
                   Password
                 </label>
                 <div className="relative">
-                  <HiOutlineLockClosed className="absolute left-3 top-3 text-gray-500" />
+                  <HiOutlineLockClosed className="absolute left-2 top-2 text-gray-500" />
                   <motion.input
-                    className="pl-10 shadow appearance-none border border-[#40DBDB] rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    id="Password"
-                    type="text"
+                    className="pl-8 shadow appearance-none border border-[#40DBDB] rounded-lg w-full py-1 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-sm"
+                    id="password"
+                    type="password"
                     placeholder="Password"
                     value={password}
                     onChange={handlePasswordChange}
@@ -118,21 +114,22 @@ function Login({ isLoggedIn, handleLogin }: LoginProps) {
                   />
                 </div>
                 <label
-                  className="block text-gray-700 text-sm font-light text-right pt-2"
-                  htmlFor={"Password"}
+                  className="block text-gray-700 text-xs font-light text-right pt-1"
+                  htmlFor="password"
                 >
-                  <a href="?">forgot password?</a>
+                  <a href="#">forgot password?</a>
                 </label>
               </div>
             </div>
+
             <motion.div
-              className="flex items-center justify-center text-[20px] px-36"
+              className="flex items-center justify-center text-[20px] px-8 md:px-0 pt-2 md:pt-0"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.5 }}
             >
               <motion.button
-                className="shadow appearance-none border bg-[#40DBDB] rounded-lg w-full py-1 px-12 mx-1"
+                className="shadow appearance-none border bg-[#40DBDB] rounded-lg w-full py-2 md:py-1 px-8 md:px-4 mx-1 text-sm"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -144,7 +141,7 @@ function Login({ isLoggedIn, handleLogin }: LoginProps) {
               </motion.button>
               <Link to="/signup">
                 <motion.button
-                  className="shadow appearance-none border border-[#40DBDB] rounded-lg w-full py-1 px-12 mx-1"
+                  className="shadow appearance-none border border-[#40DBDB] rounded-lg w-full py-2 md:py-1 px-8 md:px-4 mx-1 text-sm"
                   whileHover={{ scale: 1.05, borderColor: "#2db6b6" }}
                   whileTap={{ scale: 0.95 }}
                   initial={{ opacity: 0, scale: 0.9 }}
@@ -155,27 +152,43 @@ function Login({ isLoggedIn, handleLogin }: LoginProps) {
                 </motion.button>
               </Link>
             </motion.div>
-            <motion.div className="flex items-center justify-center text-[20px] px-36 py-2">
+            <motion.div className="flex items-center justify-center text-[20px] px-8 md:px-0 pt-2">
               or
             </motion.div>
-            <motion.div className="flex items-center justify-center text-[20px] px-36 py-2 space-x-3">
-              <motion.img src={apple} className="w-8 h-8" />
-              <motion.img src={fb} className="w-8 h-8" />
-              <motion.img src={google} className="w-8 h-8" />
+            <motion.div className="flex items-center justify-center text-[20px] px-8 md:px-0 pt-2 space-x-3">
+              <motion.img
+                src={apple}
+                className="w-8 h-8"
+                whileHover={{ scale: 1.2 }}
+              />
+              <motion.img
+                src={fb}
+                className="w-8 h-8"
+                whileHover={{ scale: 1.2 }}
+              />
+              <motion.img
+                src={google}
+                className="w-8 h-8"
+                whileHover={{ scale: 1.2 }}
+              />
             </motion.div>
           </div>
-          <div className="col-span-1 flex items-center justify-center">
-            <motion.img src={hero} className="w-[700px] h-[546px] rounded-2xl object-cover" />
+          <div className="hidden md:block col-span-1 md:col-span-1 w-full h-[424px] flex items-center justify-center">
+            <motion.img
+              src={hero}
+              className="w-full h-full rounded-2xl object-cover"
+            />
           </div>
         </motion.div>
         <motion.div
           className="z-0 col-span-3 row-span-3 row-start-2 col-start-2 font-sans grid grid-cols-2 bg-[#ECEAEA] rounded-[20px] opacity-75"
-          initial={{ opacity: 0 }} // Initial animation state
-          animate={{ opacity: 0.75 }} // Animation to run when component mounts
-          transition={{ delay: 0.6, duration: 0.5 }} // Animation transition duration and delay
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.75 }}
+          transition={{ delay: 0.6, duration: 0.5 }}
         ></motion.div>
       </motion.div>
     </>
   );
 }
+
 export default Login;
