@@ -23,13 +23,13 @@ const FlashcardMakerPage: FC = () => {
   return (
     <>
       <Header />
-      <div className="bg-gradient-to-b from-[#47EBEB] to-[#CBE1E1] h-screen p-8">
-        <h1 className="text-3xl font-bold my-4">Flashcard Maker</h1>
+      <div className="bg-gradient-to-b from-[#d8d7d7] to-[#080808] h-screen p-8">
+        <h1 className="text-3xl font-bold my-4">Тэмдэглэл</h1>
         <div className="px-12">
           <div className="mb-4 bg-white flex flex-row border rounded-xl p-2">
             <input
               type="text"
-              placeholder="Enter question"
+              placeholder="Түлхүүр үг оруулах"
               value={question}
               onChange={(e) => setQuestion(e.target.value)}
               className="border p-2 mr-2 w-2/5"
@@ -37,7 +37,7 @@ const FlashcardMakerPage: FC = () => {
             <div className="bg-zinc-400 w-0.5 h-auto"></div>
             <input
               type="text"
-              placeholder="Enter answer"
+              placeholder="Хариулт оруулах"
               value={answer}
               onChange={(e) => setAnswer(e.target.value)}
               className="border ml-2 p-2 w-3/5"

@@ -48,7 +48,7 @@ function Login({ isLoggedIn, handleLogin }: LoginProps) {
           transition={{ delay: 0.2, duration: 0.5 }}
         >
           <div className="col-span-1 text-center md:text-right md:col-span-1 md:col-start-1">
-            EDU
+            MILEDU
           </div>
           <div className="col-span-1 pt-4 w-4 h-2 flex items-center justify-center">
             +
@@ -62,7 +62,7 @@ function Login({ isLoggedIn, handleLogin }: LoginProps) {
         >
           <div className="col-span-1 md:flex md:flex-col md:items-center md:justify-center pt-8 md:pt-6">
             <div className="flex items-center justify-center text-[18px] px-2">
-              Welcome to EDU+
+              Welcome to MILEDU+
             </div>
             <div className="flex items-center justify-center text-[18px] pt-2 md:pt-[30px] px-2">
               Sign in

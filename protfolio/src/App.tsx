@@ -75,7 +75,7 @@ const App: React.FC = () => {
             <Route path="/history" element={<HistoryQuizPage />} />
             <Route path="/flashcard" element={<FlashcardMakerPage />} />
             <Route path="/art" element={<ArtQuizPage />} />
-            <Route path="/profile" element={<Profile id={0} firstName={"Luka"} email={"lgndLuka@gmail.com"} password={"test"} />} />
+            <Route path="/profile" element={<Profile id={0} firstName={"Тест"} email={"Тест"} password={"test"} />} />
             {/* <Route path="users/:id" element={<Users />} /> */}
           </Routes>
         </FlashcardProvider>

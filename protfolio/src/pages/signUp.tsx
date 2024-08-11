@@ -67,7 +67,7 @@ function Sign({ users, handleSignup }: SignProps) {
           animate={{ opacity: 1, y: 0 }} // Animation to run when component mounts
           transition={{ delay: 0.2, duration: 0.5 }} // Animation transition duration and delay
         >
-          <div className="col-span-1 text-right">EDU</div>
+          <div className="col-span-1 text-right">MILEDU</div>
           <div className="col-span-1 pt-8 w-8 h-8 flex items-center justify-center">
             +
           </div>
@@ -80,7 +80,7 @@ function Sign({ users, handleSignup }: SignProps) {
         >
           <div className="col-span-1 flex-col items-center justify-center pt-[88px] ">
             <div className="flex items-center justify-center text-[20px]  px-4">
-              Welcome to EDU+
+              Welcome to MILEDU+
             </div>
             <div className="flex items-center justify-center text-[20px] pt-[50px] px-4">
               Sign up

@@ -39,7 +39,7 @@ const QuestionComponent: React.FC<QuestionComponentProps> = ({
         {question.answers.map((answer) => (
           <motion.button
             key={answer.id}
-            className="bg-[#47EBEB] text-white font-semibold py-3 px-6 rounded-lg transition duration-300 hover:bg-[#2E8B57] hover:shadow-md"
+            className="bg-[#0e0f0f] text-white font-semibold py-3 px-6 rounded-lg transition duration-300 hover:bg-[#2E8B57] hover:shadow-md"
             onClick={() => {
               handleAnswerClick(answer);
               handleQuestionClick(question);

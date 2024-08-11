@@ -35,7 +35,7 @@ function Header() {
             transition={{ delay: 0.2, duration: 0.5 }}
           >
             <Link to="/">
-              <div className="text-right">EDU+</div>
+              <div className="text-right">MILEDU+</div>
             </Link>
           </motion.div>
         </div>

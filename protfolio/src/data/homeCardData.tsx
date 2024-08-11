@@ -1,25 +1,25 @@
-import map from "../assets/map.jpeg"
-import math from "../assets/math.jpg"
-import science from "../assets/science.jpeg"
-import art from "../assets/art.jpeg"
-import history from "../assets/history.jpeg"
-import knowledge from "../assets/knowledge.jpeg"
+import map from "../assets/map.jpg";
+import math from "../assets/math1.jpg";
+import science from "../assets/science.jpeg";
+import art from "../assets/map.jpeg";
+import history from "../assets/history.jpeg";
+import knowledge from "../assets/knowledge.jpeg";
 
 const cardData = [
   {
     id: 1,
     imageUrl: map,
-    title: "Газрын зураг",
+    title: "Цэргийн алба",
     description:
-      "Энэ хүү асуултууд нь таныг хэр олон улс орон мэддэг вэ гэдгийг шалгах хүндхэн асуултууд байх болно.",
-    url: "/map", // Example URL for navigation
+      "Энэхүү асуултууд нь таныг хэр Монголын цэргийн албаны тухай мэддэг вэ гэдгийг шалгах асуултууд байх болно.",
+    url: "/map",
   },
   {
     id: 2,
     imageUrl: math,
-    title: "Математик",
+    title: "Галт зэвсэг",
     description:
-      "Та математиктаа хэр сайн бэ? Өөрийгөө сориод үзээрэй. Хэцүүхэн байх болов уу.",
+      "Та галт зэвсгийн талаар сайн мэдэх үү? Өөрийгөө сориод үзээрэй. Хэцүүхэн байх болов уу.",
     url: "/math",
   },
   {
@@ -33,9 +33,9 @@ const cardData = [
   {
     id: 4,
     imageUrl: art,
-    title: "Уран зураг",
+    title: "Тактик",
     description:
-      "Дэлхийн болон дотоодын алдартай уран зургууд байх болно. Өөөөрийгөөөөөн сорь.",
+      "Дайнд хэрхэн тулалддагийг ойлгоход туслах цэргийн үндсэн стратеги, хөдөлгөөнүүд, жигүүр, отолт зэргийг багтаасан болно.",
     url: "/art",
   },
   {
@@ -43,7 +43,7 @@ const cardData = [
     imageUrl: history,
     title: "Түүх",
     description:
-      "Түүхийн хичээлдээ муу байсан ч хамаагүй ээ. Эдгээр асуултууд нь машид сонрирхолтой байх болно.",
+      '"Эх түүхээ мэдэхгүй хүн ойд төөрсөн сармагчин лугаа адил". Эдгээр асуултууд нь машид сонрирхолтой байх болно.',
     url: "/history",
   },
   {
@@ -51,7 +51,7 @@ const cardData = [
     imageUrl: knowledge,
     title: "Мэдлэг",
     description:
-      "Та өөрийгөө хэр мэдлэгтэй гэж бодож байна. Миний бодлоор та тийм ч сайн мэдлэгтэй биш юм шиг л .... алив батлалдаа.",
+      "Дэлхий ертөнцийн талаар суралцахад тань туслах баримт, ойлголт, мэдээлэл зэрэг янз бүрийн сэдвүүдийн талаархи ерөнхий ойлголтыг таньд олгоно.",
     url: "/knowledge",
   },
 ];

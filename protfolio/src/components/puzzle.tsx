@@ -29,7 +29,7 @@ const PuzzleIcons = () => {
     puzzleIcons.push(
       <motion.svg
         key={i}
-        className={"absolute h-12 w-12"}
+        className={"absolute h-12 w-12 z-10"}
         viewBox="0 0 65 65"
         xmlns="http://www.w3.org/2000/svg"
         whileHover={{ rotate: 360 }}

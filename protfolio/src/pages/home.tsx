@@ -20,17 +20,23 @@ function Home() {
       <div className="font-benzin">
         <Header />
 
-        <div className="flex flex-col items-center justify-center h-[850px] bg-gradient-to-br from-[#45F6F6] to-[#00223e] relative overflow-hidden">
-          <div className="flex flex-col items-center justify-center text-black p-56 relative ">
-            <h1 className="text-[36px] mb-8 whitespace-nowrap rounded-2xl px-4 py-2 z-20">
-              EDU+ тэй туршлагаж: Хаана хөгжилтөй байна тэнд суралц!
+        <div className="flex flex-col items-center justify-center h-[850px] bg-gradient-to-br from-[#222222] to-[#050505] relative overflow-hidden">
+          <div className="flex flex-col items-center justify-center  p-56 relative ">
+            <h1 className="text-[36px] mb-8 whitespace-nowrap text-white rounded-2xl px-4 py-2 z-20">
+              MilEdu+ : мэдлэгээ сориорой!
             </h1>
-            <h4 className="text-[16px] text-center z-20">
-              Асуулт асууж, найз нөхдөөр сорих, оноо авах, үр дүнг нь хуваалцах,
-              тасралтгүй хөгжилтэй өнгөрүүлээрэй!
+            <h4 className="text-[16px] text-center z-20 text-white">
+              MilEdu+ -д тавтай морилно уу. Та цэргийн албаны асуулт хариултаар
+              өөрийгөө сорьж, бидний эрх чөлөөг хамгаалж буй зоригт эрчүүд,
+              эмэгтэйчүүдийн талаарх ойлголтоо гүнзгийрүүлэх боломжтой. Хариулах
+              асуулт болгондоо тэдний өвийг судалж, суралцаарай.
             </h4>
-            <a href="#tester" onClick={() => smoothScrollToTarget("tester")}>
-              <motion.button className="border bg-[#45F6F6] rounded-full px-4 py-2 mt-48 text-black transition-all hover:text-white z-20">
+            <a
+              href="#tester"
+              onClick={() => smoothScrollToTarget("tester")}
+              className="z-20 relative"
+            >
+              <motion.button className="border bg-[#45F6F6] rounded-full px-4 py-2 mt-48 text-black transition-all hover:text-white z-100">
                 Эрэл хайгуулд гарцгаая🧐
               </motion.button>
             </a>
@@ -45,7 +51,7 @@ function Home() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
-          className="h-screen mb-4"
+          className="h-screen mb-4 pb-4"
           id="tester"
         >
           <div className="flex items-center justify-center text-bold text-[30px] pt-24 pb-8">
