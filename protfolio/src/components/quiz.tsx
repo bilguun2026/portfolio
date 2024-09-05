@@ -73,7 +73,7 @@ const Quiz: React.FC<QuizProps> = ({ quiz, onAnswerSelected }) => {
 
   return (
     <div className="max-w-lg mx-auto p-6 bg-white shadow-md rounded-md border border-gray-200">
-      <Timer durationInSeconds={30} onTimeExpired={handleTimeExpired} />
+      <Timer durationInSeconds={120} onTimeExpired={handleTimeExpired} />
 
       <QuestionComponent
         question={currentQuestion}
